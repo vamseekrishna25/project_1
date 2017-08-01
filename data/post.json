@@ -1,0 +1,42 @@
+{
+  "fruits":[
+
+	   {
+
+	      "name" : "Apple",
+           
+	      "price" : "50",
+
+	      "image" : "images/apple-16.jpg",
+           
+           "calories":"90",
+           
+           "reviews":[
+               ""
+           ]
+
+	   },
+
+	   {
+
+	      "Name" : "Watson and Powell",
+
+	      "Description" : "Taj Mahal : An immense mausoleum of white marble, built in Agra between 1631 and 1648 by order of the Mughal emperor Shah Jahan in memory of his favourite wife, the Taj Mahal is the jewel of Muslim art in India and one of the universally admired masterpieces of the world's heritage.",
+    
+	      "image" : "images/file000132701536.jpg"  ,
+           "date" :"10/15/2016"
+           
+
+	   },
+      {
+            "Name" : "Chris Wokes.",
+
+	      "Description" : "Sahara Desert :  At 3.6 million square miles (9.4 million square kilometers), the Sahara, which is Arabic for The Great Desert,engulfs most of North Africa. The desert covers large sections of Algeria, Chad, Egypt, Libya, Mali, Mauritania, Morocco, Niger, Western Sahara, Sudan and Tunisia",
+    
+	      "image" : "images/file000656451307.jpg"   ,
+          "date" : "01/31/2017"
+          
+      }
+
+	]  
+}

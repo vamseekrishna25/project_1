@@ -1,0 +1,70 @@
+<body>
+    <header>
+        <nav class="navbar navbar-inverse" style="border-radius: 0;border: 0px">
+            <div class="container-fluid" style="background-color: black;border: 0px">
+                <div class="navbar-header"> <a class="navbar-brand" style="color: white;background-color: #FF4500;font-size: 1.875em;font-weight: bold;font-style: italic;">ATLANTIS</a> </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form class="navbar-form navbar-left">
+                            <div class="input-group">
+                                <input style="background-color: black ;border-radius: 0px;border-color: white;" type="text" class="form-control" placeholder="Search">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit" style="height: 34;border-radius: 0px;"> <span class="glyphicon glyphicon-search"></span> </button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    <li style="text-align:center">
+                        <h2 style="color:white;margin-top: 0px;margin-bottom: 0px">{{clock | date:'HH:mm'}}</h2> <small style="color:white;"> {{clock | date:'dd-MM-yyyy'}} </small> </li>
+                    <li>
+                        <div class="dropdown" align="left" style="height: 50px">
+                            <button class="btn btn-lg dropdown-toggle  " style="border-radius: 0px; height: 50px; width: 50px;background-color: black" type="button" data-toggle="dropdown"> <span class="glyphicon glyphicon-list icon-size" style="color:white"></span> </button>
+                            <ul class="dropdown-menu" style="margin-top: -2px;  position: fixed; top: 50px; height: 240px; left: 0px; width: 129px; background-color: black;margin-left: -3px">
+                                <li><a href="#">HTML</a> </li>
+                                <li><a href="#">CSS</a> </li>
+                                <li><a href="#">JavaScript</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <button class="btn btn-lg dropdown-toggle  " style="border-radius: 0px; height: 50px; width: 50px;background-color: black" type="button" data-toggle="dropdown"> <span class="glyphicon"><img style="height: 30px;width: 30px" src="../images/image(3).jpg"></span> </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown" align="left" style="height: 50px">
+                            <button class="btn btn-lg dropdown-toggle  " style="border-radius: 0px; height: 50px; width: 50px;background-color: black" type="button" data-toggle="dropdown"> <span class="glyphicon glyphicon-bell icon-size" style="color:white "></span> </button>
+                            <ul class="dropdown-menu" style="margin-top: -3px ;background-color: black;">
+                                <li><a href="#">HTML</a> </li>
+                                <li><a href="#">CSS</a> </li>
+                                <li><a href="#">JavaScript</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown" align="left" style="height: 50px; margin-left: 0px; margin-top: 0px;">
+                            <button ng-click="state = !state" class="btn btn-lg dropdown-toggle " style="border-radius: 0px; height: 50px; width: 50px;background-color: orangered" type="button" data-toggle="collapse" data-target="#list"><span ng-hide="state" class="glyphicon glyphicon-align-justify icon-size" style="color:white"></span><span ng-show="state " class="glyphicon glyphicon-chevron-right icon-size" style="color:white"></span> </button>
+                            <ul id="list" class="dropdown-menu" style="margin-right: -2px; margin-top: -3px;width: 220px; background-color: black;margin-bottom: 0px;border-bottom: 0px;">
+                                <li> <img src="http://lorempixel.com/80/80" style="align:left;border-radius: 50%;height: 80px;width: 80px; border: 4px solid transparent;border-color: white;float: left;margin-left: 5px;"> &nbsp;
+                                    <p style="float: inherit; margin-right: 10px; color: white;"> &nbsp;&nbsp;Place Name
+                                        <br><span>&nbsp;&nbsp;<a href="#">Logout</a></span> </p>
+                                </li>
+                                <br>
+                                <li class="divider"></li>
+                                <li style="text-align: right"><a href="#" style="color:white;">Policies\Events</a> </li>
+                                <li style="text-align: right"><a href="#" style="color:white;">Settings</a> </li>
+                                <li style="text-align: right"><a href="#" style="color:white;">Help</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <leaflet></leaflet>
+    </main>
+    <footer>
+        
+    </footer>
+</body>

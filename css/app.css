@@ -1,4 +1,18 @@
-.angular-leaflet-map {
-    width: 400px;
-    height: 300px;
+#mapid {
+
+    margin-top: -20px;
+    height: 89.5%;
+    width: 100%;
+}
+
+footer {
+    margin-top: 0px;
+    margin-bottom:0px;
+
+    background-color: black;
+}
+
+main {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }

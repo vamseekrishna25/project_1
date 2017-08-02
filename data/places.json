@@ -1,0 +1,126 @@
+{
+    "regions": [
+
+        {
+            "Name": "Pune"
+            , "Latitude": "18.53001752"
+            , "Longitude": "73.85000362"
+	   },
+
+        {
+
+            "Name": "Nanded"
+            , "Latitude": "19.16997845"
+            , "Longitude": "77.30002559"
+	   }
+        , {
+
+            "Name": "Mumbai"
+            , "Latitude": "18.92863"
+            , "Longitude": "72.83318"
+      }
+        ,
+        {
+
+            "Name": "Tonk"
+            , "Latitude": "26.15045677"
+            , "Longitude": "75.79004024"
+        }
+        ,{
+
+
+            "Name": "Jullundur"
+            , "Latitude": "31.33492067"
+            , "Longitude": "75.56902014"
+        },
+
+        {
+
+            "Name": "Ludhiana"
+            , "Latitude": "30.90862"
+            , "Longitude": "75.85304"
+        },
+        {
+
+            "Name": "Medinipur"
+            , "Latitude": "22.3304057"
+            , "Longitude": "87.15001868"
+        },
+        {
+
+            "Name": "Krishnanagar"
+            , "Latitude": "23.38034161"
+            , "Longitude": "88.5300378"
+        },
+        {
+
+            "Name": "Siliguri"
+            , "Latitude": "26.72042198"
+            , "Longitude": "88.45500362"
+        }
+        ,
+        {
+
+            "Name": "Hyderabad"
+            , "Latitude": "17.385044"
+            , "Longitude": "78.486671"
+        }
+        ,
+        {
+
+            "Name": "Etawah"
+            , "Latitude": "26.78545677"
+            , "Longitude": "79.01495968"
+        }
+        ,
+        {
+
+            "Name": "Port Blair"
+            , "Latitude": "11.66702557"
+            , "Longitude": "92.73598262"
+        }
+        ,
+        {
+
+            "Name": "Allahabad"
+            , "Latitude": "25.45499534"
+            , "Longitude": "81.84000688"
+        }
+        ,
+        {
+
+            "Name": "Bilaspur"
+            , "Latitude": "22.09042035"
+            , "Longitude": "82.15998734"
+        }
+        ,
+        {
+
+            "Name": "Kakinada"
+            , "Latitude": "16.96747723"
+            , "Longitude": "82.23750199"
+        }
+        ,
+        {
+
+            "Name": "Hindupur"
+            , "Latitude": "13.78035911"
+            , "Longitude": "77.48998816"
+        }
+        ,
+        {
+
+            "Name": "Guntur"
+            , "Latitude": "16.32999676"
+            , "Longitude": "80.4500142"
+        }
+        ,
+        {
+
+            "Name": "Chirala"
+            , "Latitude": "15.86041302"
+            , "Longitude": "80.33999508"
+        }
+
+	]
+}

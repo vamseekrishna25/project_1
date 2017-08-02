@@ -11,7 +11,12 @@
         });
         $locationProvider.html5Mode(true);
     });*/
-    app.controller("profile_con",['$scope','$timeout', function($scope,$timeout){
+    app.controller("profile_con",['$scope','$timeout','$http', function($scope,$timeout,$http){
+
+
+        $http.get('data/places.json').then(function(response){
+            $scope.places = response.data.regions;
+        });
         
         $scope.date = new Date();
         $scope.tickInterval = 1000; //ms

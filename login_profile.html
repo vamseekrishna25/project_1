@@ -2,35 +2,33 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/app.css">
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" integrity="sha512-wcw6ts8Anuw10Mzh9Ytw4pylW8+NAD4ch3lqm9lzAsTxg0GFeJgoAtxuCLREZSC5lUXdVyo/7yfsqFjQ4S+aKw==" crossorigin="" /> </head>
 
 <body ng-controller="profile_con">
     <header>
-        <nav class="navbar navbar-inverse" style="border-radius: 0;border: 0px">
+        <nav class="navbar navbar-inverse" style="border-radius: 0px;border: 0px">
             <div class="container-fluid" style="background-color: black;border: 0px">
                 <div class="navbar-header"> <a class="navbar-brand" style="color: white;background-color: #FF4500;font-size: 1.875em;font-weight: bold;font-style: italic;">ATLANTIS</a> </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <form class="navbar-form navbar-left">
-                            <div class="input-group">
-                                <input id="region_value" list="places_value" style="color: white;background-color: black ;border-radius: 0px;border-color: white;" type="text" class="form-control" placeholder="Search">
+                            <div class="form-group has-feedback">
+                                <input id="region_value" list="places_value" type="text" style="color: white;border-radius: 0px;background-color: black;" class="form-control" placeholder="Search"> <i style="color: white"class="glyphicon glyphicon-search form-control-feedback"></i>
                                 <datalist id="places_value">
-                                    <option ng-repeat="location in places" value='{{location.Name}}'>
+                                    <option ng-repeat="location in places" value="{{location.Name}}"></option>
                                 </datalist>
-                                <div class="input-group-btn">
-                                    <button id="search" class="btn btn-default" type="submit" style="height: 34;border-radius: 0px;color:red;"> <span class="glyphicon glyphicon-search"></span> </button>
-                                </div>
                             </div>
                         </form>
                     </li>
                     <li style="text-align:center">
-                        <h2 style="color:white;margin-top: 0px;margin-bottom: 0px">{{clock | date:'HH:mm'}}</h2> <small style="color:white;"> {{clock | date:'dd-MM-yyyy'}} </small> </li>
+                        <h2 style="color:white;margin-top: 0px;margin-bottom: 0px">{{clock | date:timef}}</h2> <small style="color:white;"> {{clock | date:datef}} </small> </li>
                     <li>
                         <div class="dropdown" align="left" style="height: 50px">
-                            <button class="btn btn-lg dropdown-toggle  " style="border-radius: 0px; height: 50px; width: 50px;background-color: black" type="button" data-toggle="dropdown"> <span class="glyphicon glyphicon-list icon-size" style="color:white"></span> </button>
-                            <ul class="dropdown-menu" style="margin-top: -2px;  position: fixed; top: 50px; height: 240px; left: 0px; width: 129px; background-color: black;margin-left: -3px">
+                            <button class="btn btn-lg dropdown-toggle" id ="listBut" type="button" data-toggle="dropdown"> <span class="glyphicon glyphicon-list icon-size" style="color:white"></span> </button>
+                            <ul id ="list_menu"class="dropdown-menu">
                                 <li><a href="#">HTML</a> </li>
                                 <li><a href="#">CSS</a> </li>
                                 <li><a href="#">JavaScript</a> </li>
@@ -75,7 +73,23 @@
     <main>
         <div id="mapid"></div>
     </main>
-    <footer> hello </footer>
+    <div id="overv_tab">
+        <p>OVERVIEW</p>
+
+    </div>
+    <footer>
+<div class="container-fluid">
+    <div class="row">
+        <div id ="lu"class="col-sm-2">
+            <h6>LIVE UPDATE </h6>
+        </div>
+        <div id="maps" class="col-sm-3">
+
+            <h6><span class="glyphicon glyphicon-cog"></span> MAPS</h6>
+        </div>
+    </div>
+</div>
+      </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/angular.min.js"></script>

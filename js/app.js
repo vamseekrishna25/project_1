@@ -14,10 +14,16 @@
     app.controller("profile_con",['$scope','$timeout','$http', function($scope,$timeout,$http){
 
 
-        $http.get('data/places.json').then(function(response){
+        $http.get('data/config.json').then(function(response){
             $scope.places = response.data.regions;
         });
         
+        $http.get('data/config.json').then(function(response){
+
+            $scope.Format = response.data.format;
+           $scope.timef = $scope.Format[0].timeformat;
+            $scope.datef = $scope.Format[0].dateformat;
+        });
         $scope.date = new Date();
         $scope.tickInterval = 1000; //ms
 

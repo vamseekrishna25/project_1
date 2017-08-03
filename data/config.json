@@ -122,5 +122,13 @@
             , "Longitude": "80.33999508"
         }
 
-	]
+	],
+
+    "format":[
+        {
+            "timeformat":"HH:mm",
+            "dateformat":"dd-MM-yyyy",
+            "timezone":"UTC"
+        }
+    ]
 }

@@ -28,4 +28,34 @@ $("document").ready(function () {
             }
         });
     });
+    var count = 0;
+    $("#ob").click(function () {
+        if (count == 0) {
+            $('#overviewPannel').css({
+                'height': '200px'
+                , 'transition': 'height 1.9s ease-in-out'
+            });
+            $(this).addClass("transup");
+            count++;
+        }
+        else if (count % 2 == 0) {
+             $('#overviewPannel').css({
+                'height': '200px'
+                , 'transition': 'height 1.9s ease-in-out'
+            });
+            $(this).removeClass('transdown').addClass('transup');
+            count++;
+        }
+        else if (count % 2 != 0) {
+             $('#overviewPannel').css({
+                'height': '0px'
+                , 'transition': 'height 2.1s ease-in-out'
+            });
+
+            $(this).removeClass('transup').addClass('transdown');
+            count++;
+
+
+        }
+    });
 });

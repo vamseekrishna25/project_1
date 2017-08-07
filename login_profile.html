@@ -1,8 +1,6 @@
 <html ng-app="Myapp">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" integrity="sha512-wcw6ts8Anuw10Mzh9Ytw4pylW8+NAD4ch3lqm9lzAsTxg0GFeJgoAtxuCLREZSC5lUXdVyo/7yfsqFjQ4S+aKw==" crossorigin="" /> </head>
@@ -16,7 +14,7 @@
                     <li>
                         <form class="navbar-form navbar-left">
                             <div class="form-group has-feedback">
-                                <input id="region_value" list="places_value" type="text" style="color: white;border-radius: 0px;background-color: black;" class="form-control" placeholder="Search"> <i style="color: white"class="glyphicon glyphicon-search form-control-feedback"></i>
+                                <input id="region_value" list="places_value" type="text" style="color: white;border-radius: 0px;background-color: black;" class="form-control" placeholder="Search"> <i style="color: white" class="glyphicon glyphicon-search form-control-feedback"></i>
                                 <datalist id="places_value">
                                     <option ng-repeat="location in places" value="{{location.Name}}"></option>
                                 </datalist>
@@ -27,8 +25,8 @@
                         <h2 style="color:white;margin-top: 0px;margin-bottom: 0px">{{clock | date:timef}}</h2> <small style="color:white;"> {{clock | date:datef}} </small> </li>
                     <li>
                         <div class="dropdown" align="left" style="height: 50px">
-                            <button class="btn btn-lg dropdown-toggle" id ="listBut" type="button" data-toggle="dropdown"> <span class="glyphicon glyphicon-list icon-size" style="color:white"></span> </button>
-                            <ul id ="list_menu"class="dropdown-menu">
+                            <button class="btn btn-lg dropdown-toggle" id="listBut" type="button" data-toggle="dropdown"> <span class="glyphicon glyphicon-list icon-size" style="color:white"></span> </button>
+                            <ul id="list_menu" class="dropdown-menu">
                                 <li><a href="#">HTML</a> </li>
                                 <li><a href="#">CSS</a> </li>
                                 <li><a href="#">JavaScript</a> </li>
@@ -71,25 +69,28 @@
         </nav>
     </header>
     <main>
-        <div id="mapid"></div>
+        <div id="mapid">
+               <div class="row" id="overv_tab">
+            <div class="col-md-12">
+                <button id="ob">OVERVIEW<span class="caret"></span></button>
+            </div>
+        </div>
+        <div class="row" id="overviewPannel">
+            <div class="col-md-12">.col-md-12</div>
+        </div>
+        </div>
+
     </main>
-    <div id="overv_tab">
-        <p>OVERVIEW</p>
-
-    </div>
     <footer>
-<div class="container-fluid">
-    <div class="row">
-        <div id ="lu"class="col-sm-2">
-            <h6>LIVE UPDATE </h6>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="lu" class="col-sm-2">
+                    <h6>LIVE UPDATE </h6> </div>
+                <div id="maps" class="col-sm-3">
+                    <h6><span class="glyphicon glyphicon-cog"></span> MAPS</h6> </div>
+            </div>
         </div>
-        <div id="maps" class="col-sm-3">
-
-            <h6><span class="glyphicon glyphicon-cog"></span> MAPS</h6>
-        </div>
-    </div>
-</div>
-      </footer>
+    </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/angular.min.js"></script>

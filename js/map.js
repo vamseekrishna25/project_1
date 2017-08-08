@@ -28,34 +28,84 @@ $("document").ready(function () {
             }
         });
     });
-    var count = 0;
+    var ovcount = 0;
     $("#ob").click(function () {
-        if (count == 0) {
+        if (ovcount == 0) {
             $('#overviewPannel').css({
                 'height': '200px'
-                , 'transition': 'height 1.9s ease-in-out'
+                , 'transition': 'height 2s linear'
             });
             $(this).addClass("transup");
-            count++;
+            ovcount++;
         }
-        else if (count % 2 == 0) {
+        else if (ovcount % 2 == 0) {
              $('#overviewPannel').css({
                 'height': '200px'
-                , 'transition': 'height 1.9s ease-in-out'
+                , 'transition': 'height 2s linear'
             });
             $(this).removeClass('transdown').addClass('transup');
-            count++;
+            ovcount++;
         }
-        else if (count % 2 != 0) {
+        else if (ovcount % 2 != 0) {
              $('#overviewPannel').css({
                 'height': '0px'
-                , 'transition': 'height 2.1s ease-in-out'
+                , 'transition': 'height 2s linear'
             });
 
             $(this).removeClass('transup').addClass('transdown');
-            count++;
+            ovcount++;
 
 
         }
     });
+        var mbcount = 0;
+    $("#mb").click(function () {
+        if (mbcount == 0) {
+            $('#Modules_tab').css({
+                'width': '220px'
+
+            });
+            $(this).css({
+                'transform':' translate(-205px,0px) rotate(90deg)'
+
+            });
+            mbcount++;
+        }
+        else if (mbcount % 2 == 0) {
+             $('#Modules_tab').css({
+                'width': '220px'
+
+            });
+            $(this).css({
+                'transform':' translate(-205px,0px) rotate(90deg)'
+
+            });
+            mbcount++;
+        }
+        else if (mbcount % 2 != 0) {
+             $('#Modules_tab').css({
+               'width': '0px'
+
+            });
+
+           $(this).css({
+                'transform':' translate(0px,0px) rotate(90deg)'
+            });
+            mbcount++;
+
+
+        }
+    });
+   $("#Success").click(function(){
+         if (!$(this).is(':checked')) {
+
+        }
+
+
+   });
+    $( "#accordion" ).accordion({
+        collapsible: true
+    });
+
+
 });

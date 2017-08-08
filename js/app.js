@@ -34,7 +34,7 @@
 
     // Start the timer
     $timeout(tick, $scope.tickInterval);
-        
+        var dj=0;
      
         
     }]);

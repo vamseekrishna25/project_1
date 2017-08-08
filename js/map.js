@@ -1,9 +1,9 @@
 $("document").ready(function () {
     var mymap = L.map('mapid').setView([51.505, -0.09], 13);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-        maxZoom: 18
-        , id: 'mapbox.streets'
-        , accessToken: 'pk.eyJ1IjoidmFtc2Vla3Jpc2huYSIsImEiOiJjajVueGwxZm4zdjh0MzJvOHh4bGh4c2gyIn0.zE6O3-3gjTLdjC7rJfsMpw'
+        maxZoom: 18,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1IjoidmFtc2Vla3Jpc2huYSIsImEiOiJjajVueGwxZm4zdjh0MzJvOHh4bGh4c2gyIn0.zE6O3-3gjTLdjC7rJfsMpw'
     }).addTo(mymap);
     var marker = null;
     var lat, long;
@@ -32,80 +32,89 @@ $("document").ready(function () {
     $("#ob").click(function () {
         if (ovcount == 0) {
             $('#overviewPannel').css({
-                'height': '200px'
-                , 'transition': 'height 2s linear'
+                'height': '200px',
+                'transition': 'height 2s linear'
             });
             $(this).addClass("transup");
             ovcount++;
-        }
-        else if (ovcount % 2 == 0) {
-             $('#overviewPannel').css({
-                'height': '200px'
-                , 'transition': 'height 2s linear'
+        } else if (ovcount % 2 == 0) {
+            $('#overviewPannel').css({
+                'height': '200px',
+                'transition': 'height 2s linear'
             });
             $(this).removeClass('transdown').addClass('transup');
             ovcount++;
-        }
-        else if (ovcount % 2 != 0) {
-             $('#overviewPannel').css({
-                'height': '0px'
-                , 'transition': 'height 2s linear'
+        } else if (ovcount % 2 != 0) {
+            $('#overviewPannel').css({
+                'height': '0px',
+                'transition': 'height 2s linear'
             });
-
             $(this).removeClass('transup').addClass('transdown');
             ovcount++;
-
-
         }
     });
-        var mbcount = 0;
+    var mbcount = 0;
     $("#mb").click(function () {
         if (mbcount == 0) {
             $('#Modules_tab').css({
                 'width': '220px'
-
             });
             $(this).css({
-                'transform':' translate(-205px,0px) rotate(90deg)'
-
+                'transform': ' translate(-205px,0px) rotate(270deg)'
             });
             mbcount++;
-        }
-        else if (mbcount % 2 == 0) {
-             $('#Modules_tab').css({
+        } else if (mbcount % 2 == 0) {
+            $('#Modules_tab').css({
                 'width': '220px'
-
             });
             $(this).css({
-                'transform':' translate(-205px,0px) rotate(90deg)'
-
+                'transform': ' translate(-205px,0px) rotate(270deg)'
+            });
+            mbcount++;
+        } else if (mbcount % 2 != 0) {
+            $('#Modules_tab').css({
+                'width': '0px'
+            });
+            $(this).css({
+                'transform': ' translate(0px,0px) rotate(270deg)'
             });
             mbcount++;
         }
-        else if (mbcount % 2 != 0) {
-             $('#Modules_tab').css({
-               'width': '0px'
-
-            });
-
-           $(this).css({
-                'transform':' translate(0px,0px) rotate(90deg)'
-            });
-            mbcount++;
-
-
-        }
     });
-   $("#Success").click(function(){
-         if (!$(this).is(':checked')) {
+    setTimeout(function () {
+         $("#accordion").accordion({
+             collapsible: true
+             , active: false
+             , header: "div.wrap > h3"
+         });
+        $.each(modules_data, function (index, value) {
+       $("#accordion > #"+index).hide();
 
-        }
+             $("#c"+index).click(function(){
+	         if ($(this).is(':checked')) {
+            $("#accordion > #"+index).show();
+             }
+                 else{
+                  $("#accordion > #"+index).hide();
+                 }
+           });
+        });
 
 
-   });
-    $( "#accordion" ).accordion({
-        collapsible: true
+
+     }, 1000);
+    var modules_data;
+    $.getJSON('../data/config.json', function (data) {
+         modules_data = (data.modules);
+        var module_length = modules_data.length;
+        var inHTML = "";
+
+        $.each(modules_data, function (index, value) {
+            var newItem = "<div class=wrap id ="+index+"><h3>"+ value.Name + "</h3><div><p>" + value.Data + "</p></div></div>";
+            inHTML += newItem;
+        });
+
+        $("#accordion").html(inHTML);
     });
-
 
 });

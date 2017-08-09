@@ -15,7 +15,7 @@
                 <div class="navbar-header"> <a class="navbar-brand" style="color: white;background-color: #FF4500;font-size: 1.875em;font-weight: bold;font-style: italic;">ATLANTIS</a> </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <form class="navbar-form navbar-left">
+                        <form class="navbar-form navbar-left" style="margin-right: 0px">
                             <div class="form-group has-feedback">
                                 <input id="region_value" list="places_value" type="text" style="color: white;border-radius: 0px;background-color: black;" class="form-control" placeholder="Search"> <i style="color: white" class="glyphicon glyphicon-search form-control-feedback"></i>
                                 <datalist id="places_value">
@@ -75,16 +75,37 @@
         <div id="mapid">
             <div class="row" id="overv_tab">
                 <div class="col-md-12">
-                    <button id="ob">OVERVIEW<span class="caret"></span></button>
+                    <button id="ob">OVERVIEW<span id="ovcaret" class="caret"></span></button>
                 </div>
             </div>
             <div class="row" id="overviewPannel">
                 <div class="col-md-12">
-                    <div class="flex-container">
-  <div class="flex-item">flex item 1</div>
-  <div class="flex-item">flex item 2</div>
-  <div class="flex-item">flex item 3</div>
-</div>
+                    <ul id="ovitems">
+                        <li id="ovitems_light">
+
+                               <ul id="light_header">
+                                <li> <img class="img-responsive" src="images/street-light.png"> </li>
+                                <li id="ldata">
+
+                                       <spam id="lnumber">2501</spam>
+                            <br>
+                                    <spam id="ltext">Total lights</spam>
+
+
+                                </li>
+                            </ul>
+
+
+
+                            <ul id="light_footer" style="padding-left: 0px">
+                                <li> 586<br>Lights On </li>
+                                <li>
+                                40<br>Lights Off
+                                </li>
+                                <li>10<br>Not Working </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="row" id="leg_but">
@@ -97,7 +118,7 @@
             </div>
             <div class="row" id="mod_but">
                 <div class="col-md-12">
-                    <button id="mb"><span class="caret"></span> MODULES</button>
+                    <button id="mb"><span id="module_caret" class="caret"></span> MODULES</button>
                 </div>
             </div>
             <div class="row" id="Modules_tab">

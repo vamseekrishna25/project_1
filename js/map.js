@@ -32,24 +32,33 @@ $("document").ready(function () {
     $("#ob").click(function () {
         if (ovcount == 0) {
             $('#overviewPannel').css({
-                'height': '200px',
-                'transition': 'height 2s linear'
+                'height': '260px',
+                'transition': 'height 3s linear'
             });
             $(this).addClass("transup");
+            $("#ovcaret").css({
+                'transform':'rotate(180deg)'
+            });
             ovcount++;
         } else if (ovcount % 2 == 0) {
             $('#overviewPannel').css({
-                'height': '200px',
-                'transition': 'height 2s linear'
+                'height': '260px',
+                'transition': 'height 3s linear'
             });
             $(this).removeClass('transdown').addClass('transup');
+             $("#ovcaret").css({
+                'transform':'rotate(180deg)'
+            });
             ovcount++;
         } else if (ovcount % 2 != 0) {
             $('#overviewPannel').css({
                 'height': '0px',
-                'transition': 'height 2s linear'
+                'transition': 'height 3s linear'
             });
             $(this).removeClass('transup').addClass('transdown');
+             $("#ovcaret").css({
+                'transform':'rotate(0deg)'
+            });
             ovcount++;
         }
     });
@@ -62,6 +71,9 @@ $("document").ready(function () {
             $(this).css({
                 'transform': ' translate(-205px,0px) rotate(270deg)'
             });
+            $("#module_caret").css({
+                'transform':'rotate(180deg)'
+            });
             mbcount++;
         } else if (mbcount % 2 == 0) {
             $('#Modules_tab').css({
@@ -70,6 +82,9 @@ $("document").ready(function () {
             $(this).css({
                 'transform': ' translate(-205px,0px) rotate(270deg)'
             });
+            $("#module_caret").css({
+                'transform':'rotate(180deg)'
+            });
             mbcount++;
         } else if (mbcount % 2 != 0) {
             $('#Modules_tab').css({
@@ -77,6 +92,9 @@ $("document").ready(function () {
             });
             $(this).css({
                 'transform': ' translate(0px,0px) rotate(270deg)'
+            });
+            $("#module_caret").css({
+                'transform':'rotate(0deg)'
             });
             mbcount++;
         }

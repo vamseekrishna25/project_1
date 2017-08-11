@@ -81,28 +81,40 @@
             <div class="row" id="overviewPannel">
                 <div class="col-md-12">
                     <ul id="ovitems">
-                        <li id="ovitems_light">
-
-                               <ul id="light_header">
-                                <li> <img class="img-responsive" src="images/street-light.png"> </li>
-                                <li id="ldata">
-
-                                       <spam id="lnumber">2501</spam>
-                            <br>
-                                    <spam id="ltext">Total lights</spam>
-
-
+                        <li class="ovitems_container">
+                            <ul class="container_header">
+                                <li> <img class="img-responsive" src="images/street-light.svg"> </li>
+                                <li class="container_data">
+                                    <spam class="container_number">2501</spam>
+                                    <br>
+                                    <spam class="container_text">Total lights</spam>
                                 </li>
                             </ul>
-
-
-
-                            <ul id="light_footer" style="padding-left: 0px">
-                                <li> 586<br>Lights On </li>
-                                <li>
-                                40<br>Lights Off
+                            <ul class="container_footer" style="padding-left: 0px">
+                                <li> 586
+                                    <br>Lights On </li>
+                                <li> 40
+                                    <br>Lights Off </li>
+                                <li>10
+                                    <br>Not Working </li>
+                            </ul>
+                        </li>
+                        <li class="ovitems_container">
+                            <ul class="container_header">
+                                <li> <img class="img-responsive" src="images/sedan-car-model.svg"> </li>
+                                <li class="container_data">
+                                    <spam class="container_number">2501</spam>
+                                    <br>
+                                    <spam class="container_text">Total Cars</spam>
                                 </li>
-                                <li>10<br>Not Working </li>
+                            </ul>
+                            <ul class="container_footer" style="padding-left: 0px">
+                                <li> 586
+                                    <br>Cars On </li>
+                                <li> 40
+                                    <br>Cars Off </li>
+                                <li>10
+                                    <br>Not Working </li>
                             </ul>
                         </li>
                     </ul>
@@ -110,11 +122,22 @@
             </div>
             <div class="row" id="leg_but">
                 <div class="col-md-12">
-                    <button id="lb">LEGEND<span class="caret"></span></button>
+                    <button id="lb">LEGEND<span id="lbcaret" class="caret"></span></button>
                 </div>
             </div>
-            <div id="Legend_tab">
-                <div>Legend</div>
+            <div  id="Legend_tab">
+               <select ng-model="legend_value">
+  <option ng-repeat="moduleData in modulesData" value="{{moduleData.Name}}" id = "{{moduleData.Name}}">{{moduleData.Name}}</option>
+
+</select>
+         <div id = "legend_display">
+              <h5>{{legend_value}}  ICONS</h5>
+           <ul>
+               <li ng-if="legend_value == 'LIGHTING'" ng-repeat = "LIGHTvalue in lightData" id="{{LIGHTvalue.lighticon_names}}">{{LIGHTvalue.lighticon_names}}</li>
+               <li ng-if= "legend_value == 'PARKING'" ng-repeat = "PARKvalue in parkingData" id="{{PARKvalue.parkingicon_names}}">{{PARKvalue.parkingicon_names}}</li>
+           </ul>
+         </div>
+
             </div>
             <div class="row" id="mod_but">
                 <div class="col-md-12">
@@ -142,6 +165,7 @@
             <div class="row">
                 <div id="lu" class="col-sm-2">
                     <h6>LIVE UPDATE </h6> </div>
+
                 <div id="maps" class="col-sm-3">
                     <h6><span class="glyphicon glyphicon-cog"></span> MAPS</h6> </div>
             </div>

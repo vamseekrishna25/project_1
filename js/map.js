@@ -33,7 +33,7 @@ $("document").ready(function () {
         if (ovcount == 0) {
             $('#overviewPannel').css({
                 'height': '260px',
-                'transition': 'height 3s linear'
+                'transition': 'height 2s linear'
             });
             $(this).addClass("transup");
             $("#ovcaret").css({
@@ -43,7 +43,7 @@ $("document").ready(function () {
         } else if (ovcount % 2 == 0) {
             $('#overviewPannel').css({
                 'height': '260px',
-                'transition': 'height 3s linear'
+                'transition': 'height 2s linear'
             });
             $(this).removeClass('transdown').addClass('transup');
              $("#ovcaret").css({
@@ -53,7 +53,7 @@ $("document").ready(function () {
         } else if (ovcount % 2 != 0) {
             $('#overviewPannel').css({
                 'height': '0px',
-                'transition': 'height 3s linear'
+                'transition': 'height 2s linear'
             });
             $(this).removeClass('transup').addClass('transdown');
              $("#ovcaret").css({
@@ -99,6 +99,43 @@ $("document").ready(function () {
             mbcount++;
         }
     });
+      var lbcount = 0;
+    $("#lb").click(function () {
+        if (lbcount == 0) {
+            $('#Legend_tab').css({
+               'display':'initial'
+            });
+            $(this).css({
+                'transform':'translate(220px,-139.3px) rotate(270deg)'
+            });
+            $("#lbcaret").css({
+                'transform':'rotate(180deg)'
+            });
+            lbcount++;
+        } else if (lbcount % 2 == 0) {
+             $('#Legend_tab').css({
+               'display':'initial'
+            });
+            $(this).css({
+                'transform':'translate(220px,-139.3px) rotate(270deg)'
+            });
+             $("#lbcaret").css({
+                'transform':'rotate(180deg)'
+            });
+            lbcount++;
+        } else if (lbcount % 2 != 0) {
+             $('#Legend_tab').css({
+               'display':'none'
+            });
+            $(this).css({
+                'transform':'translate(0px,0px) rotate(270deg)'
+            });
+             $("#lbcaret").css({
+                'transform':'rotate(0deg)'
+            });
+            lbcount++;
+        }
+    });
     setTimeout(function () {
          $("#accordion").accordion({
              collapsible: true
@@ -134,5 +171,6 @@ $("document").ready(function () {
 
         $("#accordion").html(inHTML);
     });
+    $( "#Legend_tab > #speed" ).selectmenu();
 
 });

@@ -12,12 +12,15 @@
     app.controller("profile_con", ['$scope', '$timeout', '$http', function ($scope, $timeout, $http) {
         $http.get('data/config.json').then(function (response) {
             $scope.places = response.data.regions;
-        });
-        $http.get('data/config.json').then(function (response) {
-            $scope.Format = response.data.format;
+             $scope.Format = response.data.format;
             $scope.timef = $scope.Format[0].timeformat;
             $scope.datef = $scope.Format[0].dateformat;
+            $scope.modulesData = response.data.modules;
+            $scope.legend_value = $scope.modulesData[0].Name;
+            $scope.lightData = response.data.lightIcons;
+            $scope.parkingData = response.data.parkingIcons;
         });
+
         $scope.date = new Date();
         $scope.tickInterval = 1000; //ms
         var tick = function () {
@@ -26,10 +29,6 @@
         };
         // Start the timer
         $timeout(tick, $scope.tickInterval);
-        $http.get('data/config.json').then(function (response) {
-            $scope.modulesData = response.data.modules;
 
-        
-        });
     }]);
 })();

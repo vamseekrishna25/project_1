@@ -159,5 +159,261 @@
             "Data":"Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh."
 }
 
-    ]
+    ],
+    "lightIcons":[
+  {
+    "lighticon_names": "JunctionBox_Off"
+  },
+  {
+    "lighticon_names": "JunctionBox_On"
+  },
+  {
+    "lighticon_names": "JunctionBox_Out_of_service"
+  },
+  {
+    "lighticon_names": "Junction_Off"
+  },
+  {
+    "lighticon_names": "Junction_Off_Selected"
+  },
+  {
+    "lighticon_names": "junction_On"
+  },
+  {
+    "lighticon_names": "Junction_Outofservice"
+  },
+  {
+    "lighticon_names": "Junction_Outofservice_Selected"
+  },
+  {
+    "lighticon_names": "Junction_Selected"
+  },
+  {
+    "lighticon_names": "light_cluster_icon"
+  },
+  {
+    "lighticon_names": "light_cluster_icon2"
+  },
+  {
+    "lighticon_names": "light_cluster_icon_selected"
+  },
+  {
+    "lighticon_names": "light_flash_icon"
+  },
+  {
+    "lighticon_names": "light_flash_selected_icon"
+  },
+  {
+    "lighticon_names": "light_no_service_icon"
+  },
+  {
+    "lighticon_names": "light_no_service_selected_icon"
+  },
+  {
+    "lighticon_names": "light_off_icon"
+  },
+  {
+    "lighticon_names": "light_off_selected_icon"
+  },
+  {
+    "lighticon_names": "light_on_dim_icon"
+  },
+  {
+    "lighticon_names": "light_on_dim_selected_icon"
+  },
+  {
+    "lighticon_names": "light_on_icon"
+  },
+  {
+    "lighticon_names": "light_on_selected_icon"
+  }
+],
+    "parkingIcons":[
+  {
+    "parkingicon_names": "AmbulanceZone"
+  },
+  {
+    "parkingicon_names": "ambulance_parking_pin"
+  },
+  {
+    "parkingicon_names": "ambulance_parking_pin_occupied"
+  },
+  {
+    "parkingicon_names": "ambulance_parking_pin_occupied_selected"
+  },
+  {
+    "parkingicon_names": "ambulance_parking_pin_selected"
+  },
+  {
+    "parkingicon_names": "evChargingzone"
+  },
+  {
+    "parkingicon_names": "ev_charging"
+  },
+  {
+    "parkingicon_names": "ev_charging_occupied"
+  },
+  {
+    "parkingicon_names": "ev_charging_occupied_selected"
+  },
+  {
+    "parkingicon_names": "ev_charging_selected"
+  },
+  {
+    "parkingicon_names": "FireZone"
+  },
+  {
+    "parkingicon_names": "fire_zone_ping"
+  },
+  {
+    "parkingicon_names": "fire_zone_pin_occupied"
+  },
+  {
+    "parkingicon_names": "fire_zone_pin_occupied_selected"
+  },
+  {
+    "parkingicon_names": "fire_zone_selected"
+  },
+  {
+    "parkingicon_names": "Handicap"
+  },
+  {
+    "parkingicon_names": "handicapLot"
+  },
+  {
+    "parkingicon_names": "handicapped_parking_pin"
+  },
+  {
+    "parkingicon_names": "handicapped_parking_pin_occupied"
+  },
+  {
+    "parkingicon_names": "handicapped_parking_pin_occupied_selected"
+  },
+  {
+    "parkingicon_names": "handicapped_parking_pin_selected"
+  },
+  {
+    "parkingicon_names": "LoadingZone"
+  },
+  {
+    "parkingicon_names": "loadingZoneLot"
+  },
+  {
+    "parkingicon_names": "loading_zone"
+  },
+  {
+    "parkingicon_names": "loading_zone_pin_occupied"
+  },
+  {
+    "parkingicon_names": "loading_zone_pin_occupied_selected"
+  },
+  {
+    "parkingicon_names": "loading_zone_selected"
+  },
+  {
+    "parkingicon_names": "multi_level_icon"
+  },
+  {
+    "parkingicon_names": "mutilevelParkingZone.PNG"
+  },
+  {
+    "parkingicon_names": "NoParking"
+  },
+  {
+    "parkingicon_names": "noParkingLot"
+  },
+  {
+    "parkingicon_names": "no_parking"
+  },
+  {
+    "parkingicon_names": "no_parking_pin_occupied"
+  },
+  {
+    "parkingicon_names": "no_parking_pin_occupied_selected"
+  },
+  {
+    "parkingicon_names": "no_parking_selected"
+  },
+  {
+    "parkingicon_names": "OutOfService"
+  },
+  {
+    "parkingicon_names": "OutOfServiceLot"
+  },
+  {
+    "parkingicon_names": "parked_vehicle"
+  },
+  {
+    "parkingicon_names": "parking_area"
+  },
+  {
+    "parkingicon_names": "parking_area_icon"
+  },
+  {
+    "parkingicon_names": "parking_cluster_icon"
+  },
+  {
+    "parkingicon_names": "parking_pin_available"
+  },
+  {
+    "parkingicon_names": "parking_pin_available_selected"
+  },
+  {
+    "parkingicon_names": "parking_pin_no_service"
+  },
+  {
+    "parkingicon_names": "parking_pin_no_service_occupied"
+  },
+  {
+    "parkingicon_names": "parking_pin_no_service_occupied_selected"
+  },
+  {
+    "parkingicon_names": "parking_pin_no_servie_selected"
+  },
+  {
+    "parkingicon_names": "parking_pin_occupied"
+  },
+  {
+    "parkingicon_names": "parking_pin_occupied_selected"
+  },
+  {
+    "parkingicon_names": "Reserved"
+  },
+  {
+    "parkingicon_names": "reservedParkingLot"
+  },
+  {
+    "parkingicon_names": "reserved_parking_pin"
+  },
+  {
+    "parkingicon_names": "reserved_parking_pin_occupied"
+  },
+  {
+    "parkingicon_names": "reserved_parking_pin_occupied_selected"
+  },
+  {
+    "parkingicon_names": "reserved_parking_pin_selected"
+  },
+  {
+    "parkingicon_names": "StandingZone"
+  },
+  {
+    "parkingicon_names": "standingZoneLot"
+  },
+  {
+    "parkingicon_names": "standing_zone"
+  },
+  {
+    "parkingicon_names": "standing_zone_pin_occupied"
+  },
+  {
+    "parkingicon_names": "standing_zone_pin_occupied_selected"
+  },
+  {
+    "parkingicon_names": "standing_zone_selected"
+  },
+  {
+    "parkingicon_names": "zones_parking_icon"
+  }
+]
 }

@@ -12,7 +12,7 @@
     app.controller("profile_con", ['$scope', '$timeout', '$http', function ($scope, $timeout, $http) {
         $http.get('data/config.json').then(function (response) {
             $scope.places = response.data.regions;
-             $scope.Format = response.data.format;
+            $scope.Format = response.data.format;
             $scope.timef = $scope.Format[0].timeformat;
             $scope.datef = $scope.Format[0].dateformat;
             $scope.modulesData = response.data.modules;
@@ -20,6 +20,17 @@
             $scope.lightData = response.data.lightIcons;
             $scope.parkingData = response.data.parkingIcons;
         });
+
+            /*var menu_dropdown = angular.element(document.querySelector('#list'));
+            var dis = menu_dropdown.css('display');*/
+            $scope.state = false;
+            $scope.chevron_off = function () {
+                $scope.state = false;
+            };
+            $scope.chevron_on = function () {
+                29
+                $scope.state = true;
+            };
 
         $scope.date = new Date();
         $scope.tickInterval = 1000; //ms
@@ -29,6 +40,5 @@
         };
         // Start the timer
         $timeout(tick, $scope.tickInterval);
-
     }]);
 })();

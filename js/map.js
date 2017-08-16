@@ -106,7 +106,7 @@ $("document").ready(function () {
                'display':'initial'
             });
             $(this).css({
-                'transform':'translate(220px,-139.3px) rotate(270deg)'
+                'transform':'translate(350px,-139.3px) rotate(270deg)'
             });
             $("#lbcaret").css({
                 'transform':'rotate(180deg)'
@@ -117,7 +117,7 @@ $("document").ready(function () {
                'display':'initial'
             });
             $(this).css({
-                'transform':'translate(220px,-139.3px) rotate(270deg)'
+                'transform':'translate(350px,-139.3px) rotate(270deg)'
             });
              $("#lbcaret").css({
                 'transform':'rotate(180deg)'
@@ -171,6 +171,6 @@ $("document").ready(function () {
 
         $("#accordion").html(inHTML);
     });
-    $( "#Legend_tab > #speed" ).selectmenu();
+
 
 });

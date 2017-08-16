@@ -162,258 +162,343 @@
     ],
     "lightIcons":[
   {
-    "lighticon_names": "JunctionBox_Off"
+    "lighticon_names": "JunctionBox_Off",
+      "lighticon_images":"images/light/JunctionBox_Off.png"
   },
   {
-    "lighticon_names": "JunctionBox_On"
+    "lighticon_names": "JunctionBox_On",
+      "lighticon_images":"images/light/JunctionBox_On.png"
   },
   {
-    "lighticon_names": "JunctionBox_Out_of_service"
+    "lighticon_names": "JunctionBox_Out_of_service",
+      "lighticon_images":"images/light/JunctionBox_Out_of_service.png"
   },
   {
-    "lighticon_names": "Junction_Off"
+    "lighticon_names": "Junction_Off",
+      "lighticon_images":"images/light/Junction_Off.png"
   },
   {
-    "lighticon_names": "Junction_Off_Selected"
+    "lighticon_names": "Junction_Off_Selected",
+      "lighticon_images":"images/light/Junction_Off_Selected.png"
   },
   {
-    "lighticon_names": "junction_On"
+    "lighticon_names": "junction_On",
+      "lighticon_images":"images/light/junction_On.png"
   },
   {
-    "lighticon_names": "Junction_Outofservice"
+    "lighticon_names": "Junction_Outofservice",
+      "lighticon_images":"images/light/Junction_Outofservice.png"
   },
   {
-    "lighticon_names": "Junction_Outofservice_Selected"
+    "lighticon_names": "Junction_Outofservice_Selected",
+      "lighticon_images":"images/light/Junction_Outofservice_Selected.png"
   },
   {
-    "lighticon_names": "Junction_Selected"
+    "lighticon_names": "Junction_Selected",
+      "lighticon_images":"images/light/Junction_Selected.png"
   },
   {
-    "lighticon_names": "light_cluster_icon"
+    "lighticon_names": "light_cluster_icon",
+      "lighticon_images":"images/light/light_cluster_icon.png"
   },
   {
-    "lighticon_names": "light_cluster_icon2"
+    "lighticon_names": "light_cluster_icon2",
+      "lighticon_images":"images/light/light_cluster_icon2.png"
   },
   {
-    "lighticon_names": "light_cluster_icon_selected"
+    "lighticon_names": "light_cluster_icon_selected",
+      "lighticon_images":"images/light/light_cluster_icon_selected.png"
   },
   {
-    "lighticon_names": "light_flash_icon"
+    "lighticon_names": "light_flash_icon",
+      "lighticon_images":"images/light/light_flash_icon.png"
   },
   {
-    "lighticon_names": "light_flash_selected_icon"
+    "lighticon_names": "light_flash_selected_icon",
+      "lighticon_images":"images/light/light_flash_selected_icon.png"
   },
   {
-    "lighticon_names": "light_no_service_icon"
+    "lighticon_names": "light_no_service_icon",
+      "lighticon_images":"images/light/light_no_service_icon.png"
   },
   {
-    "lighticon_names": "light_no_service_selected_icon"
+    "lighticon_names": "light_no_service_selected_icon",
+      "lighticon_images":"images/light/light_no_service_selected_icon.png"
   },
   {
-    "lighticon_names": "light_off_icon"
+    "lighticon_names": "light_off_icon",
+      "lighticon_images":"images/light/light_off_icon.png"
   },
   {
-    "lighticon_names": "light_off_selected_icon"
+    "lighticon_names": "light_off_selected_icon",
+      "lighticon_images":"images/light/light_off_selected_icon.png"
   },
   {
-    "lighticon_names": "light_on_dim_icon"
+    "lighticon_names": "light_on_dim_icon",
+      "lighticon_images":"images/light/light_on_dim_icon.png"
   },
   {
-    "lighticon_names": "light_on_dim_selected_icon"
+    "lighticon_names": "light_on_dim_selected_icon",
+      "lighticon_images":"images/light/light_on_dim_selected_icon.png"
   },
   {
-    "lighticon_names": "light_on_icon"
+    "lighticon_names": "light_on_icon",
+      "lighticon_images":"images/light/light_on_icon.png"
   },
   {
-    "lighticon_names": "light_on_selected_icon"
+    "lighticon_names": "light_on_selected_icon",
+      "lighticon_images":"images/light/light_on_selected_icon.png"
   }
 ],
     "parkingIcons":[
   {
-    "parkingicon_names": "AmbulanceZone"
+    "parkingicon_names": "AmbulanceZone",
+      "parkingicon_images":"images/parking/AmbulanceZone.png"
   },
   {
-    "parkingicon_names": "ambulance_parking_pin"
+    "parkingicon_names": "ambulance_parking_pin",
+      "parkingicon_images":"images/parking/ambulance_parking_pin.png"
   },
   {
-    "parkingicon_names": "ambulance_parking_pin_occupied"
+    "parkingicon_names": "ambulance_parking_pin_occupied",
+      "parkingicon_images":"images/parking/ambulance_parking_pin_occupied.png"
   },
   {
-    "parkingicon_names": "ambulance_parking_pin_occupied_selected"
+    "parkingicon_names": "ambulance_parking_pin_occupied_selected",
+      "parkingicon_images":"images/parking/ambulance_parking_pin_occupied_selected.png"
+
   },
   {
-    "parkingicon_names": "ambulance_parking_pin_selected"
+    "parkingicon_names": "ambulance_parking_pin_selected",
+      "parkingicon_images":"images/parking/ambulance_parking_pin_selected.png"
   },
   {
-    "parkingicon_names": "evChargingzone"
+    "parkingicon_names": "evChargingzone",
+      "parkingicon_images":"images/parking/evChargingzone.png"
   },
   {
-    "parkingicon_names": "ev_charging"
+    "parkingicon_names": "ev_charging",
+      "parkingicon_images":"images/parking/ev_charging.png"
   },
   {
-    "parkingicon_names": "ev_charging_occupied"
+    "parkingicon_names": "ev_charging_occupied",
+      "parkingicon_images":"images/parking/ev_charging_occupied.png"
   },
   {
-    "parkingicon_names": "ev_charging_occupied_selected"
+    "parkingicon_names": "ev_charging_occupied_selected",
+      "parkingicon_images":"images/parking/ev_charging_occupied_selected.png"
   },
   {
-    "parkingicon_names": "ev_charging_selected"
+    "parkingicon_names": "ev_charging_selected",
+      "parkingicon_images":"images/parking/ev_charging_selected.png"
   },
   {
-    "parkingicon_names": "FireZone"
+    "parkingicon_names": "FireZone",
+      "parkingicon_images":"images/parking/FireZone.png"
   },
   {
-    "parkingicon_names": "fire_zone_ping"
+    "parkingicon_names": "fire_zone_ping",
+      "parkingicon_images":"images/parking/fire_zone_ping.png"
   },
   {
-    "parkingicon_names": "fire_zone_pin_occupied"
+    "parkingicon_names": "fire_zone_pin_occupied",
+      "parkingicon_images":"images/parking/fire_zone_pin_occupied.png"
   },
   {
-    "parkingicon_names": "fire_zone_pin_occupied_selected"
+    "parkingicon_names": "fire_zone_pin_occupied_selected",
+      "parkingicon_images":"images/parking/fire_zone_pin_occupied_selected.png"
   },
   {
-    "parkingicon_names": "fire_zone_selected"
+    "parkingicon_names": "fire_zone_selected",
+      "parkingicon_images":"images/parking/fire_zone_selected.png"
   },
   {
-    "parkingicon_names": "Handicap"
+    "parkingicon_names": "Handicap",
+      "parkingicon_images":"images/parking/Handicap.png"
   },
   {
-    "parkingicon_names": "handicapLot"
+    "parkingicon_names": "handicapLot",
+      "parkingicon_images":"images/parking/handicapLot.png"
   },
   {
-    "parkingicon_names": "handicapped_parking_pin"
+    "parkingicon_names": "handicapped_parking_pin",
+      "parkingicon_images":"images/parking/handicapped_parking_pin.png"
   },
   {
-    "parkingicon_names": "handicapped_parking_pin_occupied"
+    "parkingicon_names": "handicapped_parking_pin_occupied",
+      "parkingicon_images":"images/parking/handicapped_parking_pin_occupied.png"
   },
   {
-    "parkingicon_names": "handicapped_parking_pin_occupied_selected"
+    "parkingicon_names": "handicapped_parking_pin_occupied_selected",
+      "parkingicon_images":"images/parking/handicapped_parking_pin_occupied_selected.png"
   },
   {
-    "parkingicon_names": "handicapped_parking_pin_selected"
+    "parkingicon_names": "handicapped_parking_pin_selected",
+      "parkingicon_images":"images/parking/handicapped_parking_pin_selected.png"
   },
   {
-    "parkingicon_names": "LoadingZone"
+    "parkingicon_names": "LoadingZone",
+      "parkingicon_images":"images/parking/LoadingZone.png"
   },
   {
-    "parkingicon_names": "loadingZoneLot"
+    "parkingicon_names": "loadingZoneLot",
+      "parkingicon_images":"images/parking/loadingZoneLot.png"
   },
   {
-    "parkingicon_names": "loading_zone"
+    "parkingicon_names": "loading_zone",
+      "parkingicon_images":"images/parking/loading_zone.png"
   },
   {
-    "parkingicon_names": "loading_zone_pin_occupied"
+    "parkingicon_names": "loading_zone_pin_occupied",
+      "parkingicon_images":"images/parking/loading_zone_pin_occupied.png"
   },
   {
-    "parkingicon_names": "loading_zone_pin_occupied_selected"
+    "parkingicon_names": "loading_zone_pin_occupied_selected",
+      "parkingicon_images":"images/parking/loading_zone_pin_occupied_selected.png"
   },
   {
-    "parkingicon_names": "loading_zone_selected"
+    "parkingicon_names": "loading_zone_selected",
+      "parkingicon_images":"images/parking/loading_zone_selected.png"
   },
   {
-    "parkingicon_names": "multi_level_icon"
+    "parkingicon_names": "multi_level_icon",
+      "parkingicon_images":"images/parking/multi_level_icon.png"
   },
   {
-    "parkingicon_names": "mutilevelParkingZone.PNG"
+    "parkingicon_names": "mutilevelParkingZone",
+      "parkingicon_images":"images/parking/mutilevelParkingZone.png"
   },
   {
-    "parkingicon_names": "NoParking"
+    "parkingicon_names": "NoParking",
+      "parkingicon_images":"images/parking/NoParking.png"
   },
   {
-    "parkingicon_names": "noParkingLot"
+    "parkingicon_names": "noParkingLot",
+      "parkingicon_images":"images/parking/noParkingLot.png"
   },
   {
-    "parkingicon_names": "no_parking"
+    "parkingicon_names": "no_parking",
+      "parkingicon_images":"images/parking/no_parking.png"
   },
   {
-    "parkingicon_names": "no_parking_pin_occupied"
+    "parkingicon_names": "no_parking_pin_occupied",
+      "parkingicon_images":"images/parking/no_parking_pin_occupied.png"
   },
   {
-    "parkingicon_names": "no_parking_pin_occupied_selected"
+    "parkingicon_names": "no_parking_pin_occupied_selected",
+      "parkingicon_images":"images/parking/no_parking_pin_occupied_selected.png"
   },
   {
-    "parkingicon_names": "no_parking_selected"
+    "parkingicon_names": "no_parking_selected",
+      "parkingicon_images":"images/parking/no_parking_selected.png"
   },
   {
-    "parkingicon_names": "OutOfService"
+    "parkingicon_names": "OutOfService",
+      "parkingicon_images":"images/parking/OutOfService.png"
   },
   {
-    "parkingicon_names": "OutOfServiceLot"
+    "parkingicon_names": "OutOfServiceLot",
+      "parkingicon_images":"images/parking/OutOfServiceLot.png"
   },
   {
-    "parkingicon_names": "parked_vehicle"
+    "parkingicon_names": "parked_vehicle",
+      "parkingicon_images":"images/parking/parked_vehicle.png"
   },
   {
-    "parkingicon_names": "parking_area"
+    "parkingicon_names": "parking_area",
+      "parkingicon_images":"images/parking/parking_area.png"
   },
   {
-    "parkingicon_names": "parking_area_icon"
+    "parkingicon_names": "parking_area_icon",
+      "parkingicon_images":"images/parking/parking_area_icon.png"
   },
   {
-    "parkingicon_names": "parking_cluster_icon"
+    "parkingicon_names": "parking_cluster_icon",
+      "parkingicon_images":"images/parking/parking_cluster_icon.png"
   },
   {
-    "parkingicon_names": "parking_pin_available"
+    "parkingicon_names": "parking_pin_available",
+      "parkingicon_images":"images/parking/parking_pin_available.png"
   },
   {
-    "parkingicon_names": "parking_pin_available_selected"
+    "parkingicon_names": "parking_pin_available_selected",
+      "parkingicon_images":"images/parking/parking_pin_available_selected.png"
   },
   {
-    "parkingicon_names": "parking_pin_no_service"
+    "parkingicon_names": "parking_pin_no_service",
+      "parkingicon_images":"images/parking/parking_pin_no_service.png"
   },
   {
-    "parkingicon_names": "parking_pin_no_service_occupied"
+    "parkingicon_names": "parking_pin_no_service_occupied",
+      "parkingicon_images":"images/parking/parking_pin_no_service_occupied.png"
   },
   {
-    "parkingicon_names": "parking_pin_no_service_occupied_selected"
+    "parkingicon_names": "parking_pin_no_service_occupied_selected",
+      "parkingicon_images":"images/parking/parking_pin_no_service_occupied_selected.png"
   },
   {
-    "parkingicon_names": "parking_pin_no_servie_selected"
+    "parkingicon_names": "parking_pin_no_servie_selected",
+      "parkingicon_images":"images/parking/parking_pin_no_servie_selected.png"
   },
   {
-    "parkingicon_names": "parking_pin_occupied"
+    "parkingicon_names": "parking_pin_occupied",
+      "parkingicon_images":"images/parking/parking_pin_occupied.png"
   },
   {
-    "parkingicon_names": "parking_pin_occupied_selected"
+    "parkingicon_names": "parking_pin_occupied_selected",
+      "parkingicon_images":"images/parking/parking_pin_occupied_selected.png"
   },
   {
-    "parkingicon_names": "Reserved"
+    "parkingicon_names": "Reserved",
+      "parkingicon_images":"images/parking/Reserved.png"
   },
   {
-    "parkingicon_names": "reservedParkingLot"
+    "parkingicon_names": "reservedParkingLot",
+      "parkingicon_images":"images/parking/reservedParkingLot.png"
   },
   {
-    "parkingicon_names": "reserved_parking_pin"
+    "parkingicon_names": "reserved_parking_pin",
+      "parkingicon_images":"images/parking/reserved_parking_pin.png"
   },
   {
-    "parkingicon_names": "reserved_parking_pin_occupied"
+    "parkingicon_names": "reserved_parking_pin_occupied",
+      "parkingicon_images":"images/parking/reserved_parking_pin_occupied.png"
   },
   {
-    "parkingicon_names": "reserved_parking_pin_occupied_selected"
+    "parkingicon_names": "reserved_parking_pin_occupied_selected",
+      "parkingicon_images":"images/parking/reserved_parking_pin_occupied_selected.png"
   },
   {
-    "parkingicon_names": "reserved_parking_pin_selected"
+    "parkingicon_names": "reserved_parking_pin_selected",
+      "parkingicon_images":"images/parking/reserved_parking_pin_selected.png"
   },
   {
-    "parkingicon_names": "StandingZone"
+    "parkingicon_names": "StandingZone",
+      "parkingicon_images":"images/parking/StandingZone.png"
   },
   {
-    "parkingicon_names": "standingZoneLot"
+    "parkingicon_names": "standingZoneLot",
+      "parkingicon_images":"images/parking/standingZoneLot.png"
   },
   {
-    "parkingicon_names": "standing_zone"
+    "parkingicon_names": "standing_zone",
+      "parkingicon_images":"images/parking/standing_zone.png"
   },
   {
-    "parkingicon_names": "standing_zone_pin_occupied"
+    "parkingicon_names": "standing_zone_pin_occupied",
+      "parkingicon_images":"images/parking/standing_zone_pin_occupied.png"
   },
   {
-    "parkingicon_names": "standing_zone_pin_occupied_selected"
+    "parkingicon_names": "standing_zone_pin_occupied_selected",
+      "parkingicon_images":"images/parking/standing_zone_pin_occupied_selected.png"
   },
   {
-    "parkingicon_names": "standing_zone_selected"
+    "parkingicon_names": "standing_zone_selected",
+      "parkingicon_images":"images/parking/standing_zone_selected.png"
   },
   {
-    "parkingicon_names": "zones_parking_icon"
+    "parkingicon_names": "zones_parking_icon",
+      "parkingicon_images":"images/parking/zones_parking_icon.png"
   }
 ]
 }

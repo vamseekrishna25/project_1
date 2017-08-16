@@ -43,7 +43,7 @@
                     </li>
                     <li>
                         <div class="dropdown" align="left" style="height: 50px">
-                            <button class="btn btn-lg dropdown-toggle  " style="border-radius: 0px; height: 50px; width: 50px;background-color: black" type="button" data-toggle="dropdown"> <span class="glyphicon glyphicon-bell icon-size" style="color:white "></span> </button>
+                            <button class="btn btn-lg dropdown-toggle  " style="border-radius: 0px; height: 50px; width: 50px;background-color: black" type="button" data-toggle="dropdown"> <span class="glyphicon glyphicon-bell icon-size" style="color:white "><br><img src="images/back_arrow.png"> </span></button>
                             <ul class="dropdown-menu" style="margin-top: -3px ;background-color: black;">
                                 <li><a href="#">HTML</a> </li>
                                 <li><a href="#">CSS</a> </li>
@@ -52,19 +52,49 @@
                         </div>
                     </li>
                     <li>
-                        <div class="dropdown" align="left" style="height: 50px; margin-left: 0px; margin-top: 0px;">
-                            <button ng-click="state = !state" class="btn btn-lg dropdown-toggle " style="border-radius: 0px; height: 50px; width: 50px;background-color: orangered" type="button" data-toggle="collapse" data-target="#list"><span ng-hide="state" class="glyphicon glyphicon-align-justify icon-size" style="color:white"></span><span ng-show="state " class="glyphicon glyphicon-chevron-right icon-size" style="color:white"></span> </button>
-                            <ul id="list" class="dropdown-menu" style="margin-right: -2px; margin-top: -3px;width: 220px; background-color: black;margin-bottom: 0px;border-bottom: 0px;">
-                                <li> <img src="http://lorempixel.com/80/80" style="align:left;border-radius: 50%;height: 80px;width: 80px; border: 4px solid transparent;border-color: white;float: left;margin-left: 5px;"> &nbsp;
-                                    <p style="float: inherit; margin-right: 10px; color: white;"> &nbsp;&nbsp;Place Name
+                        <div id="profile_dropdown" class="dropdown" align="left">
+                            <button id="menu" ng-click="state = !state" class="btn btn-lg dropdown-toggle " type="button" data-toggle="dropdown"><span ng-hide="state" class="glyphicon glyphicon-align-justify icon-size" style="color:white"></span><span ng-show="state " class="glyphicon glyphicon-chevron-right icon-size" style="color:white"></span> </button>
+                            <ul id="list" class="dropdown-menu" ng-mouseleave="chevron_off()" ng-mouseenter="chevron_on()">
+                                <li> <img src="http://lorempixel.com/80/80/people"> &nbsp;
+                                    <p> &nbsp;&nbsp;Place Name
                                         <br><span>&nbsp;&nbsp;<a href="#">Logout</a></span> </p>
                                 </li>
                                 <br>
                                 <li class="divider"></li>
-                                <li style="text-align: right"><a href="#" style="color:white;">Policies\Events</a> </li>
-                                <li style="text-align: right"><a href="#" style="color:white;">Settings</a> </li>
-                                <li style="text-align: right"><a href="#" style="color:white;">Help</a> </li>
+                                <li style="text-align: right" id="Policies_events"><a data-toggle="modal" href="#policies_modal" style="color:white;">Policies\Events</a> </li>
+                                <li style="text-align: right" id="settings"><a href="#" style="color:white;">Settings</a> </li>
+                                <li style="text-align: right" id="help"><a href="#" style="color:white;">Help</a> </li>
                             </ul>
+                            <div id="policies_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><img class="image-responsive" src="images/cross-circular-button-outline.svg"></button>
+                                            <h4 class="modal-title">Policies\Events</h4> </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div id="create_new" class="col-md-6">
+                                                        <form >
+                                                           <h4>Create New</h4>
+
+                                                           <div id="radio_group">
+                                                            <input type="radio" name="policy/event" value="policy" checked> Policy
+                                                            <input type="radio" name="policy/event" value="event"> Event
+                                                            </div>
+                                                             <hr>
+                                                             <div>
+                                                                 <h6>Module</h6>
+                                                             </div>
+                                                             </form>
+                                                    </div>
+                                                    <div id="display_event" class="col-md-6">.col-md-6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -125,19 +155,26 @@
                     <button id="lb">LEGEND<span id="lbcaret" class="caret"></span></button>
                 </div>
             </div>
-            <div  id="Legend_tab">
-               <select ng-model="legend_value">
-  <option ng-repeat="moduleData in modulesData" value="{{moduleData.Name}}" id = "{{moduleData.Name}}">{{moduleData.Name}}</option>
-
-</select>
-         <div id = "legend_display">
-              <h5>{{legend_value}}  ICONS</h5>
-           <ul>
-               <li ng-if="legend_value == 'LIGHTING'" ng-repeat = "LIGHTvalue in lightData" id="{{LIGHTvalue.lighticon_names}}">{{LIGHTvalue.lighticon_names}}</li>
-               <li ng-if= "legend_value == 'PARKING'" ng-repeat = "PARKvalue in parkingData" id="{{PARKvalue.parkingicon_names}}">{{PARKvalue.parkingicon_names}}</li>
-           </ul>
-         </div>
-
+            <div id="Legend_tab">
+                <select ng-model="legend_value">
+                    <option ng-repeat="moduleData in modulesData" value="{{moduleData.Name}}" id="{{moduleData.Name}}">{{moduleData.Name}}</option>
+                </select>
+                <div id="legend_display">
+                    <h5>{{legend_value}}  ICONS</h5>
+                    <ul>
+                        <li ng-if="legend_value == 'LIGHTING'" ng-repeat="LIGHTvalue in lightData" id="l{{$index}}"><img src='{{LIGHTvalue.lighticon_images}}'>{{LIGHTvalue.lighticon_names}}</li>
+                        <li ng-if="legend_value == 'PARKING'" ng-repeat="PARKvalue in parkingData" id="p{{$index}}"><img src='{{PARKvalue.parkingicon_images}}'>{{PARKvalue.parkingicon_names}}</li>
+                        <ul ng-if="legend_value == 'PARKING'" id="occupancy">
+                            <br>
+                            <h5>
+                       OCCUPANCY
+                   </h5>
+                            <li><img src="images/square-16 (2).png">HIGH</li>
+                            <li> <img src="images/square-16 (1).png">MEDIUM</li>
+                            <li> <img src="images/square-16.png">LOW</li>
+                        </ul>
+                    </ul>
+                </div>
             </div>
             <div class="row" id="mod_but">
                 <div class="col-md-12">
@@ -165,7 +202,6 @@
             <div class="row">
                 <div id="lu" class="col-sm-2">
                     <h6>LIVE UPDATE </h6> </div>
-
                 <div id="maps" class="col-sm-3">
                     <h6><span class="glyphicon glyphicon-cog"></span> MAPS</h6> </div>
             </div>

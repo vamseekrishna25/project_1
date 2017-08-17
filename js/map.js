@@ -12,7 +12,7 @@ $("document").ready(function () {
         if (placeValue == "") {
             placeValue = null;
         }
-        $.getJSON('../data/config.json', function (data) {
+        $.getJSON('data/config.json', function (data) {
             var places_data = (data.regions);
             for (i = 0; i < 18; i++) {
                 if (places_data[i].Name == placeValue) {
@@ -159,7 +159,7 @@ $("document").ready(function () {
 
      }, 1000);
     var modules_data;
-    $.getJSON('../data/config.json', function (data) {
+    $.getJSON('data/config.json', function (data) {
          modules_data = (data.modules);
         var module_length = modules_data.length;
         var inHTML = "";

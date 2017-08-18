@@ -1,4 +1,6 @@
-
+body{
+    background-image: none;;
+}
 #mapid {
     position: relative;
     margin-top: -20px;

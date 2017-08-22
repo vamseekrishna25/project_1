@@ -1,8 +1,9 @@
-    <header>
+    <header lang = "fr">
         <nav class="navbar navbar-inverse" style="border-radius: 0px;border: 0px">
             <div class="container-fluid" style="background-color: black;border: 0px">
                 <div class="navbar-header"> <a class="navbar-brand" style="color: white;background-color: #FF4500;font-size: 1.875em;font-weight: bold;font-style: italic;">ATLANTIS</a> </div>
                 <ul class="nav navbar-nav navbar-right">
+                   <li id ="city_name"><h4>{{user_city | uppercase}}</h4></li>
                     <li>
                         <form class="navbar-form navbar-left" style="margin-right: 0px">
                             <div class="form-group has-feedback">
@@ -14,7 +15,7 @@
                         </form>
                     </li>
                     <li style="text-align:center">
-                        <h2 style="color:white;margin-top: 0px;margin-bottom: 0px">{{clock | date:timef}}</h2> <small style="color:white;"> {{clock | date:datef}} </small> </li>
+                        <h2 style="color:white;margin-top: 0px;margin-bottom: 0px">{{time()}}</h2> <small style="color:white;"> {{date()}} </small> </li>
                     <li>
                         <div class="dropdown" align="left" style="height: 50px">
                             <button class="btn btn-lg dropdown-toggle" id="listBut" type="button" data-toggle="dropdown"> <span class="glyphicon glyphicon-list icon-size" style="color:white"></span> </button>
@@ -32,9 +33,9 @@
                     </li>
                     <li>
                         <div class="dropdown" align="left" style="height: 50px">
-                            <button class="btn btn-lg dropdown-toggle  " style="border-radius: 0px; height: 50px; width: 50px;background-color: black" type="button" data-toggle="dropdown"> <span class="glyphicon glyphicon-bell icon-size" style="color:white "><br><img src="images/back_arrow.png"> </span></button>
-                            <ul class="dropdown-menu" style="margin-top: -3px ;background-color: black;">
-                                <li><a href="#">HTML</a> </li>
+                            <button ng-click="arrow_state = !arrow_state" ng-mouseenter ="arrow_state =!arrow_state" class="btn btn-lg dropdown-toggle  " style="border-radius: 0px; height: 50px; width: 50px;background-color: black" type="button" data-toggle="dropdown"> <span class="glyphicon glyphicon-bell icon-size" style="color:white "><br><img ng-show ="arrow_state"  id="arrow_img" src="images/back_arrow.png"> </span></button>
+                            <ul class="dropdown-menu" ng-mouseleave="arrow_off()" ng-mouseenter="arrow_on()" style="margin-top: -3px ;background-color: black;">
+                                <li><a >HTML</a> </li>
                                 <li><a href="#">CSS</a> </li>
                                 <li><a href="#">JavaScript</a> </li>
                             </ul>
@@ -42,7 +43,7 @@
                     </li>
                     <li>
                         <div id="profile_dropdown" class="dropdown" align="left">
-                            <button id="menu" ng-click="state = !state" class="btn btn-lg dropdown-toggle " type="button" data-toggle="dropdown"><span ng-hide="state" class="glyphicon glyphicon-align-justify icon-size" style="color:white"></span><span ng-show="state " class="glyphicon glyphicon-chevron-right icon-size" style="color:white"></span> </button>
+                            <button id="menu" ng-click="state = !state" ng-mouseenter ="state =!state"  class="btn btn-lg dropdown-toggle " type="button" data-toggle="dropdown"><span ng-hide="state" class="glyphicon glyphicon-align-justify icon-size" style="color:white"></span><span ng-show="state " class="glyphicon glyphicon-chevron-right icon-size" style="color:white"></span> </button>
                             <ul id="list" class="dropdown-menu" ng-mouseleave="chevron_off()" ng-mouseenter="chevron_on()">
                                 <li> <img src="http://lorempixel.com/80/80/people"> &nbsp;
                                     <p> &nbsp;&nbsp;Place Name

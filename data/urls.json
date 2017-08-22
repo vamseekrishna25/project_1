@@ -1,0 +1,15 @@
+{
+
+        "config_url": "http://52.221.32.110:9000/api/v1/Customers/findOne?filter=%7B%22where%22:%7B%22name%22:%22paris.com%22%7D%7D",
+
+
+        "token_url":"http://52.221.32.110:9000/api/v1/accounts/cdptoken?domain=paris.com",
+
+
+        "userdetails_url": "http://52.221.32.110:9000/t/paris.com/cdp/v1/accounts/userdetails?loginName=operator",
+
+        "customer_url":"http://52.221.32.110:9000/t/paris.com/cdp/v1/capabilities/customer/00a3da65-8c9b-4eb1-b1d9-2ede872896af"
+
+
+
+}

@@ -480,3 +480,14 @@ footer #lu h6 {
 #ovitems li {
     margin-right: 20px;
 }
+#arrow_img{
+    transform: rotate(90deg);
+    margin-bottom: -20px;
+}
+#city_name{
+    color: orangered;
+    margin-top: 5px;
+    font-weight: 900;
+
+    margin-right: -10px;
+}

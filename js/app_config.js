@@ -1,0 +1,34 @@
+angular.module("Myapp").config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/login', {
+            templateUrl: 'login.html'
+            , controller: 'loginCrlt'
+            , resolve: {
+                checklog: function (angularLoad, $rootScope, $location) {
+                    if ($rootScope.loggedIn) {
+                        $location.path('/login_profile');
+                    }
+                }
+            }
+        }).when('/login_profile', {
+            templateUrl: 'login_profile.html'
+            , controller: 'profile_con'
+            , resolve: {
+                loadscript: function (angularLoad, $rootScope) {
+                    if ($rootScope.loggedIn) {
+                        angularLoad.loadCSS('css/app.css');
+                        angularLoad.loadScript('js/map.js');
+                        angularLoad.loadScript('js/modules_tab.js');
+                        angularLoad.loadScript('js/legend_tab.js');
+                        angularLoad.loadScript('js/overview_tab.js');
+                    }
+                }
+                , check: function ($location, $rootScope) {
+                    if (!$rootScope.loggedIn) {
+                        $location.path('/login');
+                    }
+                }
+            , }
+        }).otherwise({
+            redirectTo: '/login'
+        });
+}]);

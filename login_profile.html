@@ -4,17 +4,17 @@
                 <div class="navbar-header"> <a class="navbar-brand" style="color: white;background-color: #FF4500;font-size: 1.875em;font-weight: bold;font-style: italic;">ATLANTIS</a> </div>
                 <ul class="nav navbar-nav navbar-right">
                    <li id ="city_name"><h4>{{user_city | uppercase}}</h4></li>
-                    <li>
+                    <li ng-controller="search_controller">
                         <form class="navbar-form navbar-left" style="margin-right: 0px">
                             <div class="form-group has-feedback">
-                                <input id="region_value" list="places_value" type="text" style="color: white;border-radius: 0px;background-color: black;" class="form-control" placeholder="Search"> <i style="color: white" class="glyphicon glyphicon-search form-control-feedback"></i>
+                                <input autocomplete="off" id="region_value" list="places_value" type="text" style="color: white;border-radius: 0px;background-color: black;" class="form-control" placeholder="Search"> <i style="color: white" class="glyphicon glyphicon-search form-control-feedback"></i>
                                 <datalist id="places_value">
-                                    <option ng-repeat="location in places" value="{{location.Name}}"></option>
+                                    <option ng-repeat="location in places" value="{{location.locationName}}"></option>
                                 </datalist>
                             </div>
                         </form>
                     </li>
-                    <li style="text-align:center">
+                    <li style="text-align:center" ng-controller = "timedate_controller">
                         <h2 style="color:white;margin-top: 0px;margin-bottom: 0px">{{time()}}</h2> <small style="color:white;"> {{date()}} </small> </li>
                     <li>
                         <div class="dropdown" align="left" style="height: 50px">
@@ -92,7 +92,8 @@
         </nav>
     </header>
     <main>
-        <div id="mapid">
+        <div ng-controller = "map_controller" id="mapid">
+           <div ng-controller = "overview_controller">
             <div class="row" id="overv_tab">
                 <div class="col-md-12">
                     <button id="ob">OVERVIEW<span id="ovcaret" class="caret"></span></button>
@@ -140,12 +141,13 @@
                     </ul>
                 </div>
             </div>
+            </div>
             <div class="row" id="leg_but">
                 <div class="col-md-12">
                     <button id="lb">LEGEND<span id="lbcaret" class="caret"></span></button>
                 </div>
             </div>
-            <div id="Legend_tab">
+            <div id="Legend_tab" ng-controller = "legend_controller">
                 <select ng-model="legend_value">
                     <option ng-repeat="moduleData in modulesData" value="{{moduleData.Name}}" id="{{moduleData.Name}}">{{moduleData.Name}}</option>
                 </select>
@@ -166,7 +168,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="row" id="mod_but">
+            <div ng-controller = "module_controller">
+            <div  class="row" id="mod_but">
                 <div class="col-md-12">
                     <button id="mb"><span id="module_caret" class="caret"></span> MODULES</button>
                 </div>
@@ -184,6 +187,7 @@
                 <div id="accordion">
                     <div class="wrap"> </div>
                 </div>
+            </div>
             </div>
         </div>
     </main>

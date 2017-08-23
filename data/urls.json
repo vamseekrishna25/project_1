@@ -1,15 +1,12 @@
-{
-
-        "config_url": "http://52.221.32.110:9000/api/v1/Customers/findOne?filter=%7B%22where%22:%7B%22name%22:%22paris.com%22%7D%7D",
-
-
-        "token_url":"http://52.221.32.110:9000/api/v1/accounts/cdptoken?domain=paris.com",
-
-
-        "userdetails_url": "http://52.221.32.110:9000/t/paris.com/cdp/v1/accounts/userdetails?loginName=operator",
-
-        "customer_url":"http://52.221.32.110:9000/t/paris.com/cdp/v1/capabilities/customer/00a3da65-8c9b-4eb1-b1d9-2ede872896af"
-
-
-
+{    "base_url":"http://52.221.32.110:9000"
+    ,"config_url": "/api/v1/Customers/findOne?filter=%7B%22where%22:%7B%22name%22:%22paris.com%22%7D%7D"
+    , "token_url": "/api/v1/accounts/cdptoken?domain=paris.com"
+    , "token_query":["{username: operator@paris.com,password: Test@123 }"]
+    ,"userdetails_url": "/t/paris.com/cdp/v1/accounts/userdetails?loginName=operator"
+    , "customer_url": "/t/paris.com/cdp/v1/capabilities/customer/"
+    , "activeuser_url": "/t/paris.com/cdp/v1/activateuser"
+    , "activeuser_query": ["{Query: {Activate: {RestAPI: true,WSAPI: true}}}"]
+    ,"locations_url":"/t/paris.com/cdp/v1/locations/"
+    ,"devices_url":"/t/paris.com/cdp/v1/devices"
+    ,"light_group_query":"{Query:{Find:{With:{kind:const,GeoPolygon:{as:region,geoPoint:[{latitude:12.7582315840698,longitude:74.99267578125},{latitude:12.4365765383801,longitude:75.38818359375},{latitude:11.8350944754188,longitude:75.948486328125},{latitude:11.7705701956252,longitude:76.3330078125},{latitude:11.6414762792187,longitude:76.849365234375},{latitude:11.7705701956252,longitude:77.332763671875},{latitude:11.8458470441185,longitude:77.618408203125},{latitude:12.2970682928538,longitude:77.6513671875},{latitude:12.6296180301748,longitude:77.6953125},{latitude:12.768946439456,longitude:77.9150390625},{latitude:12.7260842969482,longitude:78.277587890625},{latitude:13.0366693231152,longitude:78.50830078125},{latitude:13.5498814469171,longitude:78.365478515625},{latitude:13.7954062031328,longitude:78.123779296875},{latitude:13.8700801006859,longitude:77.87109375},{latitude:14.3069694978258,longitude:77.2998046875},{latitude:14.615478234145261,longitude:77.11303710937501},{latitude:15.167577595475697,longitude:77.60742187500001},{latitude:15.813395760460585,longitude:77.38769531250001},{latitude:16.3412256192075,longitude:77.025146484375},{latitude:16.140815555276,longitude:75.003662109375},{latitude:15.4325008818861,longitude:74.33349609375},{latitude:14.8279913473521,longitude:74.35546875}]}},LightGrpCtrl:{as:var.junctionbox,eq:{target:inside(const.region, var.junctionbox.geocoordinates),value:true}}}}}"
 }

@@ -1,4 +1,5 @@
-$('document').ready(function(){
+angular.module("Myapp").controller("module_controller",function(){
+    $('document').ready(function(){
 
      var mbcount = 0;
     $("#mb").click(function () {
@@ -73,5 +74,7 @@ $('document').ready(function(){
 
         $("#accordion").html(inHTML);
     });
+
+});
 
 });

@@ -16,10 +16,7 @@ angular.module("Myapp").config(['$routeProvider', function ($routeProvider) {
                 loadscript: function (angularLoad, $rootScope) {
                     if ($rootScope.loggedIn) {
                         angularLoad.loadCSS('css/app.css');
-                        angularLoad.loadScript('js/map.js');
-                        angularLoad.loadScript('js/modules_tab.js');
-                        angularLoad.loadScript('js/legend_tab.js');
-                        angularLoad.loadScript('js/overview_tab.js');
+
                     }
                 }
                 , check: function ($location, $rootScope) {

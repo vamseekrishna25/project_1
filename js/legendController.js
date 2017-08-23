@@ -1,4 +1,5 @@
-$('document').ready(function(){
+angular.module("Myapp").controller("legend_controller",function(){
+   $('document').ready(function(){
     var lbcount = 0;
     $("#lb").click(function () {
         if (lbcount == 0) {
@@ -36,4 +37,6 @@ $('document').ready(function(){
             lbcount++;
         }
     });
+});
+
 });

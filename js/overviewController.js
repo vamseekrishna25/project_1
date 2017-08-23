@@ -1,4 +1,5 @@
-$("document").ready(function(){
+angular.module("Myapp").controller("overview_controller",function(){
+    $("document").ready(function(){
  var ovcount = 0;
     $("#ob").click(function () {
         if (ovcount == 0) {
@@ -34,4 +35,6 @@ $("document").ready(function(){
         }
     });
 });
+});
+
 

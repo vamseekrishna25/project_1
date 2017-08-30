@@ -1,10 +1,12 @@
-angular.module("Myapp").config(['$routeProvider', function ($routeProvider) {
+angular.module("Myapp").config(['$routeProvider','localStorageServiceProvider', function ($routeProvider,localStorageServiceProvider) {
         $routeProvider.when('/login', {
             templateUrl: 'login.html'
             , controller: 'loginCrlt'
             , resolve: {
                 checklog: function (angularLoad, $rootScope, $location) {
                     if ($rootScope.loggedIn) {
+
+
                         $location.path('/login_profile');
                     }
                 }
@@ -14,13 +16,17 @@ angular.module("Myapp").config(['$routeProvider', function ($routeProvider) {
             , controller: 'profile_con'
             , resolve: {
                 loadscript: function (angularLoad, $rootScope) {
+
                     if ($rootScope.loggedIn) {
+
+
                         angularLoad.loadCSS('css/app.css');
 
                     }
                 }
                 , check: function ($location, $rootScope) {
                     if (!$rootScope.loggedIn) {
+
                         $location.path('/login');
                     }
                 }
@@ -28,4 +34,7 @@ angular.module("Myapp").config(['$routeProvider', function ($routeProvider) {
         }).otherwise({
             redirectTo: '/login'
         });
+    localStorageServiceProvider
+    .setPrefix('')
+    .setNotify(true, true)
 }]);

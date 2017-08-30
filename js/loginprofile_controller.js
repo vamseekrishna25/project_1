@@ -1,9 +1,11 @@
- angular.module("Myapp").controller("profile_con", ['$scope', '$timeout', '$http', '$rootScope', '$location', '$localStorage', 'Flash', '$window', 'angularLoad', '$filter', "moment", function ($scope, $timeout, $http, $rootScope, $location, $localStorage, Flash, $window, angularLoad, $filter, moment) {
+ angular.module("Myapp").controller("profile_con", ['$scope', '$timeout', '$http', '$rootScope', '$location',  'Flash', '$window', 'angularLoad', '$filter', "moment",'localStorageService', function ($scope, $timeout, $http, $rootScope, $location, Flash, $window, angularLoad, $filter, moment,localStorageService) {
+
      $scope.Logout = function () {
          angularLoad.loadCSS('css/style.css');
          $location.path('/login');
-
          $rootScope.loggedIn = false;
+         localStorageService.set("loggedIn",false);
+
      };
 
 

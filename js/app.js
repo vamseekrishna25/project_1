@@ -1,4 +1,6 @@
 (function () {
-    var app = angular.module("Myapp", ['ngRoute', 'ngStorage', 'ngFlash', 'angularLoad', 'angularMoment']);
+    var app = angular.module("Myapp", ['ngRoute', 'ngFlash', 'angularLoad', 'angularMoment','LocalStorageModule']);
+
+
 
 })();

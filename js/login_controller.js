@@ -1,4 +1,5 @@
- angular.module("Myapp").controller("loginCrlt", ['$scope', '$location', '$route', '$rootScope', '$http', '$window', function ($scope, $location, $route, $rootScope, $http, $window) {
+ angular.module("Myapp").controller("loginCrlt", ['$scope', '$location', '$route', '$rootScope', '$http', '$window','localStorageService', function ($scope, $location, $route, $rootScope, $http, $window,localStorageService) {
+
      $scope.submit = function () {
          if ($scope.username == "operator@paris.com" && $scope.password == "Test@123") {
              $http.get("data/urls.json").then(function (response) {
@@ -18,7 +19,11 @@
                              $http.get($rootScope.urls_data.base_url + $rootScope.urls_data.customer_url + $rootScope.user_details.id, $rootScope.config).then(function (reponse) {
                                  $rootScope.user_capabilities = reponse.data;
                                  $location.path('/login_profile');
-                                         $rootScope.loggedIn = true;
+                                 $rootScope.loggedIn = true;
+                                 localStorageService.set("loggedIn",true);
+
+
+
 
                              }, function (response) {
                                  $location.path('/login');

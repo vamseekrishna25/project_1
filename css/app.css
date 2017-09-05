@@ -491,3 +491,10 @@ footer #lu h6 {
 
     margin-right: -10px;
 }
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}

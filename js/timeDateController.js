@@ -1,6 +1,7 @@
 angular.module("Myapp").controller("timedate_controller",['$scope','$rootScope','moment','$filter','$timeout',function($scope,$rootScope,moment,$filter,$timeout){
 
     $('document').ready(function(){
+
         $scope.revtimef = $rootScope.config_details.time_format;
      $scope.timef = $filter('reverse')($scope.revtimef);
      $scope.date = new Date();

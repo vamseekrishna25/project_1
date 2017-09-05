@@ -1,4 +1,4 @@
-angular.module("Myapp").controller("module_controller",function(){
+angular.module("Myapp").controller("module_controller",function($scope){
     $('document').ready(function(){
 
      var mbcount = 0;
@@ -57,6 +57,7 @@ angular.module("Myapp").controller("module_controller",function(){
                  }
            });
         });
+
 
 
 

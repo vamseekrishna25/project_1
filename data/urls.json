@@ -12,4 +12,6 @@
 ,"light_group_query":"}},LightGrpCtrl:{as:var.junctionbox,eq:{target:inside(const.region, var.junctionbox.geocoordinates),value:true}}}}}"
  ,"light_zone_query":"}},LightZone:{as:var.myspace,eq:{target:overlaps(const.region, var.myspace.boundary),value:true}}}}}"
  ,"parking_query":"}},ParkingSpace:{as:var.myspace,eq:{target:overlaps(const.region, var.myspace.boundary),value:true}}},checkMultilevel:}}"
+ ,"parking_spots_query":"}},ParkingSpot:{as:var.myspot,eq:{target:inside(const.region, var.myspot.geocoordinates),value:true}}}}}"
+
 }

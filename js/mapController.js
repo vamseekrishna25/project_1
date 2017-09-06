@@ -36,10 +36,13 @@ angular.module("Myapp").controller("map_controller", ['$scope', '$rootScope', '$
                 var parking_query_array = [];
                 var light_group_query_array = [];
                 var light_zone_query_array = [];
-                $window.parking_markers = [];
+                 var parking_spots_query_array =[];
+                $window.initial_parking_markers = [];
                 parking_query_array.push(($rootScope.urls_data.devices_query_head + query_cod_string.toString().replace(/\"/g, '') + $rootScope.urls_data.parking_query));
                 light_group_query_array.push(($rootScope.urls_data.devices_query_head + query_cod_string.toString().replace(/\"/g, '') + $rootScope.urls_data.light_group_query));
                 light_zone_query_array.push(($rootScope.urls_data.devices_query_head + query_cod_string.toString().replace(/\"/g, '') + $rootScope.urls_data.light_zone_query));
+                 parking_spots_query_array.push(($rootScope.urls_data.devices_query_head + query_cod_string.toString().replace(/\"/g, '') + $rootScope.urls_data.parking_spots_query));
+                var parking_spots_query_object = angular.toJson(parking_spots_query_array);
                 var parking_query_object = angular.toJson(parking_query_array);
                 var light_group_query_object = angular.toJson(light_group_query_array);
                 var light_zone_query_object = angular.toJson(light_zone_query_array);
@@ -48,17 +51,21 @@ angular.module("Myapp").controller("map_controller", ['$scope', '$rootScope', '$
                     $rootScope.parking_data = $rootScope.parking_query_data.Find.Result;
                     $scope.createParkingSpace = function () {
                         $.each($rootScope.parking_data, function (index, value) {
-                            $window.parking_markers[index] = L.marker([value.ParkingSpace.boundary.geoPoint[0].latitude, value.ParkingSpace.boundary.geoPoint[0].longitude], {
+                            $window.initial_parking_markers[index] = L.marker([value.ParkingSpace.boundary.geoPoint[0].latitude, value.ParkingSpace.boundary.geoPoint[0].longitude], {
                                 myCustomId: "pm" + index
                                 , icon: $rootScope.parkingSpaceIcon
                             }).addTo($rootScope.mymap);
+                             $window.initial_parking_markers[index].on('dblclick', function () {
+
+                                    $rootScope.mymap.setView([value.ParkingSpace.boundary.geoPoint[0].latitude, value.ParkingSpace.boundary.geoPoint[0].longitude],18);
+                                });
                         });
                     };
                     $scope.removeParkingSpace = function () {
-                        var length = $window.parking_markers.length;
+                        var length = $window.initial_parking_markers.length;
                         var i;
                         for (i = 0; i < length; i++) {
-                            $rootScope.mymap.removeLayer($window.parking_markers[i]);
+                            $rootScope.mymap.removeLayer($window.initial_parking_markers[i]);
                         }
                     };
                     $("#c1").click(function () {
@@ -70,6 +77,53 @@ angular.module("Myapp").controller("map_controller", ['$scope', '$rootScope', '$
                         }
                     });
                 });
+                $window.initial_parking_spots_markers = [];
+                   $http.post($rootScope.urls_data.base_url + $rootScope.urls_data.devices_url, parking_spots_query_object).then(function(response){
+                                   $rootScope.parking_spots_query_data = response.data;
+                        $rootScope.parking_spots_data = $rootScope.parking_spots_query_data.Find.Result;
+                        $scope.createParkingSpots = function () {
+
+                            $.each($rootScope.parking_spots_data, function (index, value) {
+                                $window.initial_parking_spots_markers[index] = L.marker([value.ParkingSpot.geocoordinates.latitude, value.ParkingSpot.geocoordinates.longitude], {
+                                    myCustomId: "psm" + index,
+                                    icon: $rootScope.parkingSpotsIcon,
+opacity:0
+                                }).addTo($rootScope.mymap);
+
+                                  var on = true;
+
+
+                                $window.initial_parking_spots_markers[index].on('click', function (e) {
+
+                                    if (on) {
+                                        $window.initial_parking_spots_markers[index].setIcon($rootScope.parkingSpotsIconOn);
+                                        on = !on;
+                                    } else {
+                                       $window.initial_parking_spots_markers[index].setIcon($rootScope.parkingSpotsIcon);
+                                        on = !on;
+                                    }
+
+                                });
+                            });
+                        };
+                        $scope.removeParkingSpots = function () {
+                            var length = $window.initial_parking_spots_markers.length;
+                            var i;
+                            for (i = 0; i < length; i++) {
+                                $rootScope.mymap.removeLayer($window.initial_parking_spots_markers[i]);
+                            }
+                        };
+
+                                                  $("#c1").click(function () {
+                            if ($(this).is(':checked')) {
+                                $scope.createParkingSpots();
+                            } else {
+                                $scope.removeParkingSpots();
+                            }
+                        });
+
+
+                     });
                  $window.initial_lighting_zone_markers = [];
                 $http.post($rootScope.urls_data.base_url + $rootScope.urls_data.devices_url, light_zone_query_object).then(function (response) {
                     $rootScope.lighting_zone_query_data = response.data;
@@ -126,6 +180,20 @@ angular.module("Myapp").controller("map_controller", ['$scope', '$rootScope', '$
                                 , icon: $rootScope.LightingIcon
                                 , opacity: 0
                             }).addTo($rootScope.mymap);
+                               var on = true;
+
+
+                                $window.initial_lighting_markers[index].on('click', function (e) {
+
+                                    if (on) {
+                                        $window.initial_lighting_markers[index].setIcon($rootScope.LightingIconOn);
+                                        on = !on;
+                                    } else {
+                                        $window.initial_lighting_markers[index].setIcon($rootScope.LightingIcon);
+                                        on = !on;
+                                    }
+
+                                });
                         });
                     };
                     $scope.removeinitialLighting = function () {
@@ -170,14 +238,50 @@ angular.module("Myapp").controller("map_controller", ['$scope', '$rootScope', '$
             };
         });
         }, 1000);
+                 setTimeout(function () {
+            $rootScope.mymap.on('zoomend', function (ev) {
+           if ($rootScope.mymap.getZoom() > 15 && $rootScope.mymap.getZoom() <= 18) {
+                            var i;
+                            var parksp_length = $window.initial_parking_spots_markers.length;
+                            for (i = 0; i < parksp_length; i++) {
+                                $window.initial_parking_spots_markers[i].setOpacity(1);
+                            }
+                            var parking_space_length = $window.initial_parking_markers.length;
+                            for (i = 0; i < parking_space_length; i++) {
+                                $window.initial_parking_markers[i].setOpacity(0);
+                            }
+                        };
+                        if ($rootScope.mymap.getZoom() >= 6 && $rootScope.mymap.getZoom() <= 15) {
+                                var i;
+                            var parksp_length = $window.initial_parking_spots_markers.length;
+                            for (i = 0; i < parksp_length; i++) {
+                                $window.initial_parking_spots_markers[i].setOpacity(0);
+                            }
+                            var parking_space_length = $window.initial_parking_markers.length;
+                            for (i = 0; i < parking_space_length; i++) {
+                                $window.initial_parking_markers[i].setOpacity(1);
+                            }
+                        };
+        });
+        }, 1000);
+
 
             });
         });
         $rootScope.parkingSpaceIcon = L.icon({
             iconUrl: '../images/parking/parking_cluster_icon.png'
         , });
+         $rootScope.parkingSpotsIcon = L.icon({
+            iconUrl: '../images/parking/parking_pin_available.png'
+        , });
+          $rootScope.parkingSpotsIconOn = L.icon({
+            iconUrl: '../images/parking/parking_pin_available_selected.png'
+        , });
         $rootScope.LightingIcon = L.icon({
             iconUrl: '../images/light/light_on_icon.png'
+        , });
+         $rootScope.LightingIconOn = L.icon({
+            iconUrl: '../images/light/light_on_selected_icon.png'
         , });
         $rootScope.LightingZoneIcon = L.icon({
             iconUrl: '../images/light/light_cluster_icon.png'

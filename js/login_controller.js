@@ -1,7 +1,9 @@
- angular.module("Myapp").controller("loginCrlt", ['$scope', '$location', '$route', '$rootScope', '$http', '$window','localStorageService', function ($scope, $location, $route, $rootScope, $http, $window,localStorageService) {
-
+ angular.module("Myapp").controller("loginCrlt", ['$scope', '$location', '$route', '$rootScope', '$http', '$window','localStorageService','Flash', function ($scope, $location, $route, $rootScope, $http, $window,localStorageService,Flash) {
+Flash.clear();
      $scope.submit = function () {
+      Flash.clear();
          if ($scope.username == "operator@paris.com" && $scope.password == "Test@123") {
+             Flash.create('success', 'Login Success Rediredcting...', 0, {container: 'flash-fixed'});
              $http.get("data/urls.json").then(function (response) {
                  $rootScope.urls_data = response.data;
                  $http.get($rootScope.urls_data.base_url + $rootScope.urls_data.config_url).then(function (response) {
@@ -38,6 +40,9 @@
                      $location.path('/login');
                  });
              });
+         }
+         else{
+             Flash.create('danger', 'Invalid Credentials!', 0, {container: 'flash-fixed'});
          }
      };
     }]);
